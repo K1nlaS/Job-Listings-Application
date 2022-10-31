@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// Misc
+import { useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
+// Redux
+import { fetchJobsAsync } from "./store/jobs/jobs.action";
+
+// Components
+import Home from "./routes/home/home.route";
+
+// Styled Components
+import { APP_CONTAINER, CONTENT_CONTAINER } from "./App.styles";
+
+
 
 function App() {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchJobsAsync());
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <APP_CONTAINER>
+      <CONTENT_CONTAINER>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </CONTENT_CONTAINER>
+    </APP_CONTAINER>
   );
 }
 
