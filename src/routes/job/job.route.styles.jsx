@@ -18,6 +18,18 @@ export const HEAD_SECTION = styled.section`
     margin: 0;
     padding: 0;
   }
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    gap: 2.4rem;
+    padding-bottom: 0;
+    border-bottom: none;
+
+    h1 {
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid #3A4562;
+    }
+  }
 `;
 
 export const ACTIONS_BOX = styled.div`
@@ -56,6 +68,14 @@ export const APPLY_BUTTON_CONTAINER = styled.div`
     border-radius: 0.8rem;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 700px) {
+    text-align: center;
+
+    &:first-of-type {
+      display: none;
+    }
+  }
 `;
 
 export const INFO_SECTION = styled.section`
@@ -64,17 +84,37 @@ export const INFO_SECTION = styled.section`
 
 export const TITLE_BOX = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 3.2rem;
   color: #3A4562;
 
   div {
     max-width: 50rem;
+  }
 
-    span {
-      margin-top: 0.7rem;
-      display: block;
+  @media screen and (max-width: 700px) {
+    row-gap: 0.5rem;
+
+    div {
+      max-width: 100%;
     }
+  }
+`;
+
+export const DAYS = styled.span`
+  order: 3;
+  flex: 100%;
+  margin-top: 0.7rem;
+
+  @media screen and (max-width: 700px) {
+    order: 2;
+    max-width: fit-content;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    display: flex;
+    align-items: center;
   }
 `;
 
@@ -89,6 +129,12 @@ export const SALARY = styled.span`
     line-height: 2.4rem;
     font-size: 1.8rem;
     letter-spacing: -0.5625px;
+  }
+
+  @media screen and (max-width: 700px) {
+    order: 3;
+    margin-left: 0;
+    flex-shrink: 1;
   }
 `;
 
@@ -179,10 +225,14 @@ export const EMPLOYMENT = styled.div`
   border-radius: 0.8rem;
 
   font-weight: 700;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
   letter-spacing: -0.457143px;
   color: #55699E;
+
+  @media screen and (max-width: 700px) {
+    max-width: 12rem;
+  }
 `;
 
 export const BENEFIT = styled(EMPLOYMENT)`
@@ -209,6 +259,11 @@ export const IMG_BLOCK = styled.div`
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
+
+  @media screen and (max-width: 700px) {
+    max-width: 100%;
+    overflow-x: scroll;
+  }
 `;
 
 export const IMG = styled.div`
@@ -219,6 +274,11 @@ export const IMG = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 0.8rem;
+
+  @media screen and (max-width: 700px) {
+    min-width: 21rem;
+    min-height: 11.6rem;
+  }
 `;
 
 export const RETURN_CONTAINER = styled.div`

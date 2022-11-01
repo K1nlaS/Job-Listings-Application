@@ -20,6 +20,7 @@ import {
   INFO_SECTION,
   TITLE_BOX,
   SALARY,
+  DAYS,
   DESCRIPTION,
   RESPONSIBILITIES,
   BENEFITS,
@@ -73,8 +74,9 @@ const Job = () => {
         <TITLE_BOX>
           <div>
             <h2>{title}</h2>
-            <span>{randomDays === 1 ? `Posted ${randomDays} day ago` : `Posted ${randomDays} days ago`}</span>
           </div>
+
+          <DAYS>{randomDays === 1 ? `Posted ${randomDays} day ago` : `Posted ${randomDays} days ago`}</DAYS>
 
           <SALARY>
             € {salary.replaceAll("k", " 000").replace("-", "—")} <br />
