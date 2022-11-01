@@ -14,8 +14,6 @@ const Home = () => {
 
   const jobsArray = useSelector(selectJobs);
 
-  console.log(jobsArray);
-
   return (
     <HOME_CONTAINER>
       {

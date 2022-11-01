@@ -18,7 +18,7 @@ import {
 
 const JobListing = ({ data }) => {
 
-  const { pictures, title, id, name, location } = data;
+  const { pictures, title, id, name } = data;
   const randomDays = Math.floor(Math.random() * 30) + 1;
   const randomStars = Math.floor(Math.random() * 6);
 
