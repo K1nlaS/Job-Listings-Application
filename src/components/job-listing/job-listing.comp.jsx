@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 // Styled Components
 import {
   JOB_LISTING_CONTAINER,
+  CONTENT_BOX,
   INFO_BOX,
   IMG,
   INFO_CONTENT,
@@ -24,31 +25,34 @@ const JobListing = ({ data }) => {
 
   return (
     <JOB_LISTING_CONTAINER>
-      <INFO_BOX>
-        <IMG img={pictures[0]} />
-        <INFO_CONTENT>
-          <Link to={`job/${id}`}>{title}</Link>
-          <span>Department name • {name}</span>
-          <LOCATION>
-            <LocationIcon />
-            <span>Vienna, Austria</span>
-          </LOCATION>
-        </INFO_CONTENT>
-      </INFO_BOX>
+      <IMG img={pictures[0]} />
+      <CONTENT_BOX>
+        <INFO_BOX>
+          <INFO_CONTENT>
+            <Link to={`job/${id}`}>{title}</Link>
+            <span>Department name • {name}</span>
+            <LOCATION>
+              <LocationIcon />
+              <span>Vienna, Austria</span>
+            </LOCATION>
+          </INFO_CONTENT>
+        </INFO_BOX>
 
-      <STARS_BOX>
-        {
-          [...Array(randomStars)].map((e, i) => <FilledStar key={Math.random()} />)
-        }
-        {
-          [...Array(5 - randomStars)].map((e, i) => <HollowStar key={Math.random()} />)
-        }
-      </STARS_BOX>
+        <STARS_BOX>
+          {
+            [...Array(randomStars)].map((e, i) => <FilledStar key={Math.random()} />)
+          }
+          {
+            [...Array(5 - randomStars)].map((e, i) => <HollowStar key={Math.random()} />)
+          }
+        </STARS_BOX>
 
-      <DETAILS_BOX>
-        <BookmarkIcon />
-        <span>{randomDays === 1 ? `Posted ${randomDays} day ago` : `Posted ${randomDays} days ago`}</span>
-      </DETAILS_BOX>
+        <DETAILS_BOX>
+          <BookmarkIcon />
+          <span>{randomDays === 1 ? `Posted ${randomDays} day ago` : `Posted ${randomDays} days ago`}</span>
+        </DETAILS_BOX>
+
+      </CONTENT_BOX >
     </JOB_LISTING_CONTAINER>
   );
 };

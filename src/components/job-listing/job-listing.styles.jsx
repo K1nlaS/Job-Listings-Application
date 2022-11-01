@@ -11,7 +11,7 @@ export const JOB_LISTING_CONTAINER = styled.div`
   padding: 2.4rem 1.6rem;
   min-height: 16.4rem;
   align-items: stretch;
-  gap: 3.2rem;
+  gap: 2.6rem;
   align-items: center;
 
   &:last-child {
@@ -19,21 +19,45 @@ export const JOB_LISTING_CONTAINER = styled.div`
   }
 `;
 
+export const CONTENT_BOX = styled.div`
+  display: flex;
+  align-items: center;
+  align-items: stretch;
+  gap: 3.2rem;
+  align-items: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 700px) {
+    flex-wrap: wrap;
+  }
+`;
+
 export const INFO_BOX = styled.div`
   max-width: 120rem;
   flex-basis: 100%;
   display: flex;
-  gap: 2.6rem;
+
+  @media screen and (max-width: 700px) {
+    order: 3;
+  }
 `;
 
 export const IMG = styled.div`
   min-width: 8.5rem;
-  max-height: 8.5rem;
+  min-height: 8.5rem;
   background-image: url(${props => props.img});
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 100%;
+
+  @media screen and (max-width: 700px) {
+    min-width: 6.6rem;
+  min-height: 6.6rem;
+  }
 `;
 
 export const INFO_CONTENT = styled.div`
@@ -55,6 +79,20 @@ export const INFO_CONTENT = styled.div`
     color: var(--text-secondary);
     font-size: 1.6rem;
     letter-spacing: 0.23619px;
+  }
+
+  @media screen and (max-width: 700px) {
+    gap: 0.5rem;
+
+    a {
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
+
+    span {
+      font-weight: 400;
+    }
   }
 `;
 
@@ -82,6 +120,21 @@ export const DETAILS_BOX = styled.div`
     line-height: 2.5rem;
     text-align: end;
   }
+
+  @media screen and (max-width: 700px) {
+    order: 2;
+    margin-left: auto;
+
+    span {
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+    }
+
+    svg {
+      display: none;
+    }
+  }
 `;
 
 export const STARS_BOX = styled.div`
@@ -92,5 +145,14 @@ export const STARS_BOX = styled.div`
   svg {
     width: 1.9rem;
     height: 1.8rem;
+  }
+
+  @media screen and (max-width: 700px) {
+    order: 1;
+
+    svg {
+    width: 1rem;
+    height: 1rem;
+    }
   }
 `;
