@@ -1,3 +1,9 @@
+:root {
+  /* Colors */
+  --text-dark: #3A4562;
+  --text-secondary: #878D9D;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +26,7 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */
   font-size: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Sections
@@ -408,6 +415,13 @@ h2 {
 }
 
 h3 {
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.625px;
+}
+
+h4 {
+  font-weight: 700;
   font-size: 20px;
   line-height: 25px;
   letter-spacing: -0.625px;

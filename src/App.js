@@ -18,9 +18,9 @@ function App() {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchJobsAsync());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(fetchJobsAsync());
+  // }, []);
 
   return (
     <APP_CONTAINER>
