@@ -21,10 +21,9 @@ export const JOB_LISTING_CONTAINER = styled.div`
 
 export const CONTENT_BOX = styled.div`
   display: flex;
-  align-items: center;
-  align-items: stretch;
   gap: 3.2rem;
   align-items: center;
+  width: 100%;
 
   &:last-child {
     margin-bottom: 0;
